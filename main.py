@@ -59,5 +59,5 @@ def atualizar_cotacao(cotacao_id: int, cotacao_data: Cotacao):
 
 # SERVIÇO PRINCIPAL
 @app.post("/indicadores/cotacao", tags=["Serviço Principal"], summary="Serviço que será realizado para o mock.")
-def listar():
-    return Service.listar()
+def listar(filtro_indicadores: Indicadores):
+    return Service.listar(filtro_indicadores)
