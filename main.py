@@ -52,7 +52,7 @@ def deletar_cotacao(cotacao_id: int):
     return CotacaoService.deletar_cotacao(cotacao_id)
 
 
-@app.put("/cotacao/v1/{cotacao_id}")
+@app.put("/cotacao/v1/{cotacao_id}", tags=["Cotação"], summary="Atualizar cotação por id")
 def atualizar_cotacao(cotacao_id: int, cotacao_data: Cotacao):
     return CotacaoService.atualizar_cotacao(cotacao_id, cotacao_data)
 
